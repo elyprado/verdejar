@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuh-i6MSw3Cd931u1QI-uD7yoKKqSRZRg&amp;sensor=true"></script>
+        <script type="application/javascript" src="google_maps/google_maps.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage" id="mainpage">
+
+            <div class="upage-outer">
+                <div class="uib-header header-bg container-group inner-element uib_w_15" data-uib="layout/header" data-ver="0">
+                    <h2></h2>
+                    <div class="widget-container wrapping-col single-centered">
+
+                    </div>
+                    <div class="widget-container content-area horiz-area wrapping-col left">
+                        <div class="widget uib_w_25 scale-image d-margins icone" data-uib="media/img" data-ver="0">
+                            <figure class="figure-align">
+                                <img src="images/treeicon.png">
+                                <figcaption data-position="bottom"></figcaption>
+                            </figure>
+                        </div>
+                        <div class="tarea widget uib_w_24 d-margins titulo" data-uib="media/text" data-ver="0" name="uib_w_24">
+                            <div class="widget-container left-receptacle"></div>
+                            <div class="widget-container right-receptacle"></div>
+                            <div class="text-container" style="margin-left: 14px; margin-top:10px;">
+                                <p>Uma árvore em um milhão</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-container content-area horiz-area wrapping-col right">
+                        <button class="btn widget uib_w_21 d-margins btn-xs btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-user button-icon-top" data-position="top"></i>Usuário</button>
+                    </div>
+                </div>
+                <div id="pagMapa" class="upage-content vertical-col left">
+                    <div class="widget uib_w_23 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8" id="mapa" data-center-longitude="-47.400385" data-center-latitude="-20.514832"></div>
+                    <button class="btn widget uib_w_26 d-margins btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnNovaArvore"><i class="glyphicon glyphicon-plus-sign button-icon-left" data-position="left"></i>Inserir nova árvore</button>
+                </div>
+                <div id="pagGaleria" class="upage-content vertical-col left hidden">
+                    <div class="uib-grid widget uib_w_27 grid-text grid-height d-margins" data-uib="layout/grid" data-ver="1" id="gridGaleria">
+
+                    </div>
+                </div>
+                <div id="pagArvore" class="upage-content vertical-col left hidden">
+                    <div class="widget uib_w_28 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/Strabburg.jpg" id="imgFotoArvore">
+
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="tarea widget uib_w_29 d-margins" data-uib="media/text" data-ver="0" name="uib_w_29" id="lblDescricaoArvore">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_16" data-uib="layout/footer" data-ver="0">
+                    <h2></h2>
+                    <div class="widget-container wrapping-col single-centered">
+                        <div class="btn-group uib-bs-flex widget uib_w_17 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                            <button class="btn widget uib_w_18 btn-lg btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnMapa"><i class="glyphicon glyphicon-map-marker" data-position="icon only"></i>
+                            </button>
+                            <button class="btn widget uib_w_19 btn-lg btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnGaleria"><i class="glyphicon glyphicon-picture" data-position="icon only"></i>
+                            </button>
+                            <button class="btn widget uib_w_20 btn-lg btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnSobre"><i class="glyphicon glyphicon-tags" data-position="icon only"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div id="pagSobre" class="upage-content vertical-col left hidden">
+                    <div class="tarea widget uib_w_32 d-margins" data-uib="media/text" data-ver="0" name="uib_w_32">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div class="text-container">
+                            <h1>Uma árvore em um milhão</h1>
+                            <p>Descrever aqui sobre o projeto "Uma árvore em um milhão"</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal outer-element modal-dialog-center uib_w_33" data-uib="twitter%20bootstrap/modal" data-ver="1" data-backdrop="true" id="dialogNovaArvore">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">x</button>
+                            <h4 class="modal-title">Nova Árvore</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="col uib_col_2 single-col" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+                                    <div class="table-thing widget uib_w_42 d-margins" data-uib="twitter%20bootstrap/select" data-ver="1">
+                                        <label class="narrow-control label-inline">Espécie:</label>
+                                        <select class="wide-control form-control default" id="cmbEspecie">
+                                            <option>* não identificada *</option>
+                                            <option>Alfeneiro</option>
+                                            <option>Cambuci</option>
+                                            <option>Crataegus</option>
+                                            <option>Ipê</option>
+                                            <option>Jacarandá</option>
+                                            <option>Jangada-do-campo</option>
+                                            <option>Leucena</option>
+                                            <option>Pitangueira</option>
+                                        </select>
+                                    </div>
+                                    <div class="tarea widget uib_w_39 d-margins" data-uib="media/text" data-ver="0" name="uib_w_39">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+                                        <div class="text-container" id="foto">
+
+                                        </div>
+                                    </div>
+                                    <button class="btn widget uib_w_34 d-margins btn-lg btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnFotografar"><i class="glyphicon glyphicon-camera" data-position="icon only"></i>
+                                    </button>
+                                    <div class="btn-group uib-bs-flex widget uib_w_35 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                                        <button class="btn widget uib_w_36 btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnCancelarArvore"><i class="glyphicon glyphicon-remove-circle button-icon-left" data-position="left"></i>Cancelar</button>
+
+                                        <button class="btn widget uib_w_38 btn-success" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnEnviarArvore">Enviar <i class="glyphicon glyphicon-ok-circle button-icon-right" data-position="right"></i>
+                                        </button>
+                                    </div>
+                                    <span class="uib_shim"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal outer-element modal-dialog-center uib_w_30" data-uib="twitter%20bootstrap/modal" data-ver="1" data-backdrop="true" id="dialogAguardar">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+                                    <div class="widget uib_w_31 d-margins" data-uib="media/img" data-ver="0">
+                                        <figure class="figure-align">
+                                            <img src="images/loading.gif">
+                                            <figcaption data-position="bottom"></figcaption>
+                                        </figure>
+                                    </div>
+                                    <span class="uib_shim"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal outer-element uib_w_40 modal-dialog-center" data-uib="twitter%20bootstrap/modal" data-ver="1" data-backdrop="true" id="dialogAlerta">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <div class="col uib_col_3 single-col" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+                                    <div class="alert no_wrap widget uib_w_41 d-margins alert-danger" data-uib="twitter%20bootstrap/alert" data-ver="1" id="txtAlerta">????</div>
+                                    <span class="uib_shim"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
